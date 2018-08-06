@@ -1,11 +1,13 @@
 class Invoice
 
-  attr_reader :amount, :number, :debtor
+  attr_accessor :status
+  attr_reader :amount, :number
   
   def initialize(debtor, number, amount)
     @debtor = debtor
     @number = number
     @amount = amount
+    @status = 'unpaid'
   end
 
   def status
@@ -20,8 +22,8 @@ class Invoice
     @number
   end
 
-  def debtor
-    @debtor
+  def status=(new_status)
+    @status = new_status
   end
-
+  
 end
