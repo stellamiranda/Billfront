@@ -25,9 +25,15 @@ describe ProcessInvoices do
 
     it "should update Customer credit line" do
       customer_initial_credit_line = @customer.credit_line
-      expect(finance_invoices(@invoices, @customer)).to_not eq customer_initial_credit_line
+      expect(finance_invoices(@customer, @invoices)).to_not eq customer_initial_credit_line
+    end
+
+    it "should update Customer credit line" do
+      customer_initial_credit_line = @customer.credit_line
+      expect(finance_invoices(@customer, @invoices)).to eq 7000
     end
     
   end
+
 
 end
