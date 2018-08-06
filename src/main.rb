@@ -21,7 +21,7 @@ module Main
   def finance_customer(data_credit_line_hash, data_invoices_hash)
     @invoices = load_invoices(data_invoices_hash)
     customer = load_customer(data_credit_line_hash)
-    return finance_invoices(@invoices, customer)
+    return finance_invoices(customer, @invoices)
   end
   
   def get_processed_invoices
