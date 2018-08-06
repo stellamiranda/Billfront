@@ -1,0 +1,27 @@
+[
+  {
+    "debtor": "fritz-kola",
+    "number": "inv-kola1",
+    "amount": 16000
+  },
+  {
+    "debtor": "Tommi's Burger Joint",
+    "number": "inv-burger1",
+    "amount": 15000
+  },
+  {
+    "debtor": "fritz-kola",
+    "number": "inv-kola2",
+    "amount": 14000
+  },
+  {
+    "debtor": "Dolores",
+    "number": "inv-burrito1",
+    "amount": 15000
+  },
+  {
+    "debtor": "Tommi's Burger Joint",
+    "number": "inv-burger2",
+    "amount": 2000
+  }
+]
