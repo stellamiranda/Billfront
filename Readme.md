@@ -39,5 +39,5 @@ rspec spec
  - RSpec 3.7
 
 ## Author
- - Stella Miranda - August 5th, 2018
+ - Stella Miranda - August 6th, 2018
 

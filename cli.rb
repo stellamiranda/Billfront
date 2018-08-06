@@ -17,14 +17,14 @@ def read_file(path)
     file.close
     hash = JSON.parse(content)
   rescue
-    puts "Failed to open"
+    puts "Failed to open: " + path
     exit
   end
   return hash
 end
 
-credit_line = read_file(File.open(ARGV[0]))
-invoices = read_file(File.open(ARGV[1])) 
+credit_line = read_file(ARGV[0])
+invoices = read_file(ARGV[1])
 
 updated_credit_line = finance_customer(credit_line, invoices )
 
