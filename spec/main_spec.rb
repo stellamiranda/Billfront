@@ -14,6 +14,13 @@ describe Main do
     @unique_invoice_params = [{"debtor"=>"burgermeister", "number"=>"inv-burger3", "amount"=>18000}]
     @invoices_params = [{"debtor"=>"fritz-kola", "number"=>"inv-kola1", "amount"=>16000}, {"debtor"=>"Tommi's Burger Joint", "number"=>"inv-burger1", "amount"=>15000}, {"debtor"=>"fritz-kola", "number"=>"inv-kola2", "amount"=>14000}, {"debtor"=>"Dolores", "number"=>"inv-burrito1", "amount"=>15000}, {"debtor"=>"Tommi's Burger Joint", "number"=>"inv-burger2", "amount"=>2000}]
     @customer_params = {"customer"=>40000}
+
+    @invoices = []
+    @invoices << Invoice.new("fritz-kola", "inv-kola1", 16000) 
+    @invoices << Invoice.new("Tommi's Burger Joint", "inv-burger1", 15000) 
+    @invoices << Invoice.new("fritz-kola", "inv-kola2", 14000) 
+    @invoices << Invoice.new("Dolores", "inv-burrito1", 15000) 
+    @invoices << Invoice.new("Tommi's Burger Joint", "inv-burger2", 2000)
     
   end
 
@@ -51,6 +58,14 @@ describe Main do
         expect(get_processed_invoices).to include({"inv-burger1" => 15000, "inv-burger2" => 2000, "inv-burrito1" => 0, "inv-kola1" => 16000, "inv-kola2" => 0})
       end
 
+    end
+
+  end
+
+  describe "get_processed_invoices" do
+
+    it "should return an array" do
+      expect(get_processed_invoices).to be_an_instance_of(Hash)
     end
 
   end
