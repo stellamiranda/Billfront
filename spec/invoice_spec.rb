@@ -61,10 +61,10 @@ describe Invoice do
 
   end
 
-  context "When trying to edit an Invoice's amount" do
+  context "When trying to edit an Invoice's debtor" do
 
     it "Should Not allow it" do
-      expect(@invoice).to_not respond_to(:amount=)
+      expect(@invoice).to_not respond_to(:debtor=)
     end
 
   end
