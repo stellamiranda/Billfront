@@ -4,6 +4,9 @@ require 'rspec'
 require_relative '../src/invoice'
 
 describe Invoice do
+  before :each do
+    @invoice = Invoice.new("fritz-kola", "inv-kola1", 16000 )   
+  end
 
   context "When Create a New Invoice" do
 
