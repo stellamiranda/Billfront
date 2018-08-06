@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 
 require 'json'
+require './src/main'
+
+include Main
 
 def read_file(path) 
   begin
@@ -15,5 +18,6 @@ def read_file(path)
   return hash
 end
 
-puts read_file(File.open(ARGV[0]))
-puts read_file(File.open(ARGV[1]))
+updated_credit_line = finance_customer(read_file(File.open(ARGV[0])), read_file(File.open(ARGV[1])) )
+
+puts get_processed_invoices

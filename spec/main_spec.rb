@@ -2,6 +2,8 @@ require 'spec_helper'
 require 'rspec/core'
 require 'rspec'
 require_relative '../src/main'
+require_relative '../src/customer'
+require_relative '../src/invoice'
 
 describe Main do
 
