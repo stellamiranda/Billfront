@@ -1,7 +1,21 @@
-{
+
+
+ • Financed amount:
+
+ 40000
+
+
+ • Financed amount of each invoice
+
+ {
   "inv-kola1": 16000,
   "inv-burger1": 15000,
   "inv-kola2": 0,
   "inv-burrito1": 0,
   "inv-burger2": 2000
 }
+
+
+ • Remaining customer credit:
+
+ 7000
