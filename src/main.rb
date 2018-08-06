@@ -4,7 +4,7 @@ module Main
     return []
   end
 
-  def load_costumer(credit_line_hash)
+  def load_customer(credit_line_hash)
     return []
   end
 

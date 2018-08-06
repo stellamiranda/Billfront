@@ -14,10 +14,10 @@ describe Main do
     
   end
 
-  describe "load_costumer" do
+  describe "load_customer" do
 
     it "should return an array" do
-      expect(load_costumer(@customer_params)).to be_an_instance_of(Array)
+      expect(load_customer(@customer_params)).to be_an_instance_of(Array)
     end
 
   end
