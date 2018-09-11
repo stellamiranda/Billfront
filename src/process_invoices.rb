@@ -1,13 +1,17 @@
 module ProcessInvoices 
   
-  def finance_invoices(customer, invoices)
+  def finance_customer(credit_line, invoices)
+    processed_invoices = []
+
+    credit = credit_line['customer']
     invoices.each do |invoice|
-      if customer.credit_line >= invoice.amount
-        customer.credit_line = customer.credit_line - invoice.amount
-        invoice.status = "paid"
+      value = invoice["amount"].to_i
+      if credit >= value
+        credit = credit - value
+        processed_invoices << invoice
       end
     end
-    return customer.credit_line
+    return credit, processed_invoices
   end
 
 end

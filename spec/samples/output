@@ -5,15 +5,25 @@
  40000
 
 
- • Financed amount of each invoice
+ • Invoices processed:
 
- {
-  "inv-kola1": 16000,
-  "inv-burger1": 15000,
-  "inv-kola2": 0,
-  "inv-burrito1": 0,
-  "inv-burger2": 2000
-}
+ [
+  {
+    "debtor": "fritz-kola",
+    "number": "inv-kola1",
+    "amount": 16000
+  },
+  {
+    "debtor": "Tommi's Burger Joint",
+    "number": "inv-burger1",
+    "amount": 15000
+  },
+  {
+    "debtor": "Tommi's Burger Joint",
+    "number": "inv-burger2",
+    "amount": 2000
+  }
+]
 
 
  • Remaining customer credit:

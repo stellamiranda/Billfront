@@ -1,5 +1,7 @@
 # mini BillFront
 
+[More information](https://gist.github.com/iGEL/e62b5bf58de4a4db18dec21d290362a6)
+
 ### Requirements
  - Ruby 2.x
 
@@ -40,4 +42,5 @@ rspec spec
 
 ## Author
  - Stella Miranda - August 6th, 2018
+
 

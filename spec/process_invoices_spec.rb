@@ -2,38 +2,27 @@ require 'spec_helper'
 require 'rspec/core'
 require 'rspec'
 require_relative '../src/process_invoices'
-require_relative '../src/customer'
-require_relative '../src/invoice'
 
 describe ProcessInvoices do
 
   include ProcessInvoices
 
-  before :each do 
-    
-    @customer = Customer.new(40000)
-    @invoices = []
-    @invoices << Invoice.new("fritz-kola", "inv-kola1", 16000) 
-    @invoices << Invoice.new("Tommi's Burger Joint", "inv-burger1", 15000) 
-    @invoices << Invoice.new("fritz-kola", "inv-kola2", 14000) 
-    @invoices << Invoice.new("Dolores", "inv-burrito1", 15000) 
-    @invoices << Invoice.new("Tommi's Burger Joint", "inv-burger2", 2000)
+  describe "finance_customer" do
 
-  end
+    before do 
 
-  describe "finance_invoices" do
+      @invoices = @invoices_params
 
-    it "should update Customer credit line" do
-      customer_initial_credit_line = @customer.credit_line
-      expect(finance_invoices(@customer, @invoices)).to_not eq customer_initial_credit_line
+      it "should return the Customer line of credit updated " do
+        expect(finance_customer(@invoices_params, @customer_params)).to eq 7000
+      end
+        
+      it "should return the Customer line of credit updated " do
+        expect(get_processed_invoices).to include({"inv-burger1" => 15000, "inv-burger2" => 2000, "inv-burrito1" => 0, "inv-kola1" => 16000, "inv-kola2" => 0})
+      end
+
     end
-
-    it "should update Customer credit line" do
-      customer_initial_credit_line = @customer.credit_line
-      expect(finance_invoices(@customer, @invoices)).to eq 7000
-    end
-    
+  
   end
-
 
 end
